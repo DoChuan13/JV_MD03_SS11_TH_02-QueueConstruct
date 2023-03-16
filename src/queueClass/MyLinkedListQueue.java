@@ -4,14 +4,14 @@ public class MyLinkedListQueue {
     private Node head;
     private Node tail;
 
-    //Constructor khởi tạo queue (xếp chồng) với đầu và đuôi là trống
+    //Constructor khởi tạo queue (hàng đợi) với đầu và đuôi là trống
     //đầu và đuôi là các Node = {key, next} = lưu trữ dữ liệu và "nextLink" kế tiếp
     public MyLinkedListQueue() {
         this.head = null;
         this.tail = null;
     }
 
-    //Thêm phần tử vào cuối của queue (xếp chồng)
+    //Thêm phần tử vào cuối của queue (hàng đợi)
     //Xét tính hợp lệ null của đầu và đuôi để xác lập dữ liệu nếu queue trống
     //nếu queue không trống thì ghi tiếp vào "nextLink" của đuôi hiện tại
     public void enqueue(int key) {
@@ -23,7 +23,7 @@ public class MyLinkedListQueue {
         this.tail.next = temp;
         this.tail = temp;
     }
-    //Xoá phần tử ở cuối đuôi của queue (xếp chồng)
+    //Xoá phần tử ở cuối đuôi của queue (hàng đợi)
     //Xét tính hợp lệ null của đầu và đuôi để xoá bỏ dữ liệu nếu queue trống
     //nếu queue không trống thì đuôi sẽ bị gán null để loại bỏ giá trị
     public Node dequeue() {
